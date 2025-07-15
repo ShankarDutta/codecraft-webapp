@@ -1,7 +1,7 @@
+import { MoveRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../shadcnui/button";
-import { ArrowBigRight } from "lucide-react";
-import Image from "next/image";
 
 const Hero = () => {
 	return (
@@ -33,14 +33,14 @@ const Hero = () => {
 					{/* started btn  */}
 					<Link href={"/codeeditor"}>
 						<Button className="h-auto w-auto bg-blue-500 text-lg font-normal text-white hover:cursor-pointer hover:bg-blue-600">
-							Start Coding <ArrowBigRight className="pt-0.5" />
+							Start Coding <MoveRight className="pt-0.5" />
 						</Button>
 					</Link>
 				</div>
 
 				{/* hero img for all devices  */}
 				<Image
-					src={"/home/heroimg.svg"}
+					src={"/Home/heroimg.svg"}
 					height={700}
 					width={700}
 					priority

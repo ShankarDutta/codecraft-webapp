@@ -1,5 +1,11 @@
 import { ReactNode } from "react";
 
 export type RootLayoutProps = Readonly<{
-  children: ReactNode;
+	children: ReactNode;
 }>;
+
+export type qnaprops = {
+	id: number;
+	question: string;
+	answer: string;
+};

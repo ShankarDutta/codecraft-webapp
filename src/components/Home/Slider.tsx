@@ -5,8 +5,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Slider = () => {
 	return (
