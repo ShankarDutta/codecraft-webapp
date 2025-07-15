@@ -69,7 +69,7 @@ lucide-react
 
 swiper-js
 
-react-fast-marquee
+
 
 📌 Use Cases
 Rapid prototyping of frontend components and layouts.
