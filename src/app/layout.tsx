@@ -1,8 +1,8 @@
-import Footer from "@/components/Footer/Footer";
 import NavBar from "@/components/Header/NavBar";
 import ThemeProvider from "@/components/Theme/ThemeProvider";
 import { RootLayoutProps } from "@/lib/types";
 import "./globals.css";
+import Footer from "@/components/Footer/Footer";
 
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (

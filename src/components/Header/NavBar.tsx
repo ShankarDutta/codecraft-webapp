@@ -6,6 +6,7 @@ import ThemeChangerBtn from "../Theme/ThemeChangerBtn";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import Image from "next/image";
+import CodeEditorNav from "./CodeEditorNav";
 const NavBar = () => {
 	const pathname = usePathname();
 	return (
@@ -45,7 +46,9 @@ const NavBar = () => {
 						<ThemeChangerBtn />
 					</div>
 				</div>
-			) : null}
+			) : (
+				<CodeEditorNav />
+			)}
 		</header>
 	);
 };
