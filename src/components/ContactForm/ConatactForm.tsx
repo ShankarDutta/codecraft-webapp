@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 import { useForm } from "react-hook-form";
 import { Slide, ToastContainer, toast } from "react-toastify";
 import { Button } from "@/components/shadcnui/button";
+
+
 import {
 	Form,
 	FormControl,
@@ -35,27 +37,9 @@ const ContactForm = () => {
 	});
 
 	const sentData = async (data: ContactSchematype) => {
-		const payload = {
-			...data,
-			access_key: "YOUR_ACCESS_KEY_HERE",
-		};
 
-		const res = await fetch("https://api.web3forms.com/submit", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: JSON.stringify(payload),
-		});
 
-		const result = await res.json();
 
-		if (result.success) {
-			toast.success("Message sent successfully!");
-			rhform.reset();
-		} else {
-			toast.error("Failed to send message.");
 		}
 	};
 
