@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { useForm } from "react-hook-form";
 import { Slide, ToastContainer, toast } from "react-toastify";
 import { Button } from "@/components/shadcnui/button";
+import ky from "ky";
 import {
 	Form,
 	FormControl,
@@ -35,27 +36,32 @@ const ContactForm = () => {
 	});
 
 	const sentData = async (data: ContactSchematype) => {
-		const payload = {
-			...data,
-			access_key: "YOUR_ACCESS_KEY_HERE",
-		};
+		console.log(data);
 
-		const res = await fetch("https://api.web3forms.com/submit", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: JSON.stringify(payload),
-		});
+		try {
+			const payload = {
+				...data,
+				access_key: "YOUR_ACCESS_KEY_HERE",
+			};
 
-		const result = await res.json();
+			const res: { success: boolean } = await ky
+				.post("https://api.web3forms.com/submit", {
+					json: payload,
+					headers: {
+						Accept: "application/json",
+					},
+				})
+				.json();
 
-		if (result.success) {
-			toast.success("Message sent successfully!");
-			rhform.reset();
-		} else {
-			toast.error("Failed to send message.");
+			if (res.success) {
+				toast.success("Message sent successfully!");
+				rhform.reset();
+			} else {
+				toast.error("Failed to send message.");
+			}
+		} catch (error) {
+			toast.error("Something went wrong!");
+			console.error("Form submission error:", error);
 		}
 	};
 
