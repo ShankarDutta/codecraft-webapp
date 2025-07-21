@@ -2,6 +2,7 @@ import FaqSec from "@/components/Home/FaqSec";
 import FeedBackSec from "@/components/Home/FeedBackSec";
 import Hero from "@/components/Home/Hero";
 import Slider from "@/components/Home/Slider";
+import ScrollTopBtn from "@/components/ScrollTopBtn";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
 
 const page = () => {
 	return (
-		<>
+		<section className="mx-auto max-w-7xl px-6">
+			<ScrollTopBtn />
 			<div className="motion-scale-in-0 absolute top-60 left-[65%] z-[-10] h-[30%] w-[10%] rounded-full bg-gradient-to-r from-[#3dbeff] from-0% to-[#ff43fc] to-50% blur-[100px]"></div>
 			{/* back-ground gradient  */}
 			<Hero />
@@ -33,7 +35,7 @@ const page = () => {
 			<section className="mb-20 items-center rounded-md bg-slate-500/35 px-8 py-12 backdrop-blur-md md:flex md:justify-between">
 				<FeedBackSec />
 			</section>
-		</>
+		</section>
 	);
 };
 
