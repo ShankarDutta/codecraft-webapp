@@ -1,5 +1,13 @@
+import TopElements from "@/components/Codeeditor/TopElements";
+
 const page = () => {
-	return <></>;
+	return (
+		<>
+			<div className="bg-black">
+				<TopElements />
+			</div>
+		</>
+	);
 };
 
 export default page;

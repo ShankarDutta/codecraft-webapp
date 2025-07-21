@@ -9,3 +9,9 @@ export type qnaprops = {
 	question: string;
 	answer: string;
 };
+
+export type previewprops = {
+	html: string;
+	css: string;
+	js: string;
+};
