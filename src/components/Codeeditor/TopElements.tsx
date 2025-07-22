@@ -5,7 +5,9 @@ const TopElements = () => {
 	return (
 		<section className="mx-auto max-w-7xl px-6">
 			{/* Desktop view  */}
-			<div className="hidden md:block">
+			<div className="hidden justify-between gap-4 md:flex">
+				<DesktopEditor />
+				<DesktopEditor />
 				<DesktopEditor />
 			</div>
 
