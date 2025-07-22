@@ -4,7 +4,7 @@ import ThemeChangerBtn from "../Theme/ThemeChangerBtn";
 
 const CodeEditorNav = () => {
 	return (
-		<header>
+		<header className="border-b-2 border-gray-700 bg-gray-800">
 			<div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
 				<Link href="/">
 					<Image
