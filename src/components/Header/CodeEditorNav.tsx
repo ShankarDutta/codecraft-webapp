@@ -6,9 +6,7 @@ const CodeEditorNav = () => {
 	return (
 		<header>
 			<div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
-				<Link
-					href="/"
-					className="hidden lg:block">
+				<Link href="/">
 					<Image
 						src="/logo.svg"
 						height={200}
