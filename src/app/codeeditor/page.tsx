@@ -3,9 +3,9 @@ import TopElements from "@/components/Codeeditor/TopElements";
 const page = () => {
 	return (
 		<>
-			<div className="bg-gray-950 py-4">
+			<section className="bg-white dark:bg-gray-950">
 				<TopElements />
-			</div>
+			</section>
 		</>
 	);
 };

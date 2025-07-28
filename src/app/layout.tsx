@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import NavBar from "@/components/Header/NavBar";
 import ThemeProvider from "@/components/Theme/ThemeProvider";
 import { RootLayoutProps } from "@/lib/types";
@@ -15,7 +16,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					enableSystem={false}>
 					<NavBar />
 					<main>{children}</main>
-					{/* <Footer /> */}
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>

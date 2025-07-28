@@ -1,18 +1,69 @@
-import { FaHtml5 } from "react-icons/fa";
+// components/Codeeditor/DesktopEditor.tsx
 
-const DesktopEditor = () => {
-	return (
-		<section className="w-full rounded-md border-1 border-gray-700 bg-white text-xl font-semibold text-black/90 dark:bg-gray-900 dark:text-white/90">
-			<div className="flex items-center gap-1 rounded-md border-2 bg-gray-300/50 py-3 dark:border-gray-700 dark:bg-gray-900/50">
-				<div className="ml-2">
+import { ClientEditorProps } from "@/lib/types";
+import dynamic from "next/dynamic";
+import { FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
+
+const CodeEditorClient = dynamic(() => import("./CodeEditorClient"), {
+	ssr: false,
+});
+
+const DesktopEditor = ({ language, value, onChange }: ClientEditorProps) => {
+	const getIcon = (lang: string) => {
+		switch (lang) {
+			case "xml":
+				return (
 					<FaHtml5
 						color="red"
-						size={24}
+						size={20}
 					/>
-				</div>
-				<div className="mb-1">HTML</div>
+				);
+			case "css":
+				return (
+					<FaCss3Alt
+						color="blue"
+						size={20}
+					/>
+				);
+			case "javascript":
+				return (
+					<FaJsSquare
+						color="gold"
+						size={20}
+					/>
+				);
+			default:
+				return "";
+		}
+	};
+
+	const getTitle = (lang: string) => {
+		switch (lang) {
+			case "xml":
+				return "HTML";
+			case "css":
+				return "CSS";
+			case "javascript":
+				return "JavaScript";
+			default:
+				return "Code";
+		}
+	};
+	return (
+		<section className="w-full rounded-md border-t-0 border-gray-700 bg-white text-black shadow-lg dark:bg-gray-900 dark:text-white">
+			<div className="flex items-center gap-2 border-b-2 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-800">
+				{getIcon(language)}
+				<span className="text-sm font-medium">
+					{getTitle(language)}
+				</span>
 			</div>
-			<div className="h-[300px]">Html</div>
+			<div className="h-[270px] overflow-hidden">
+				<CodeEditorClient
+					language={language}
+					value={value}
+					onChange={onChange}
+				/>
+			</div>
 		</section>
 	);
 };
