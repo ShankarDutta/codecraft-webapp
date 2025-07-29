@@ -13,7 +13,7 @@ const Hero = () => {
 					height={200}
 					width={200}
 					priority
-					className="block h-auto w-[250] lg:hidden"
+					className="block h-auto w-[250] py-6 lg:hidden"
 					alt=" logo"
 				/>
 

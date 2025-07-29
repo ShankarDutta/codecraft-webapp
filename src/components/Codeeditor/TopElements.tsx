@@ -1,7 +1,7 @@
 "use client";
-
 import { Eye } from "lucide-react";
 import { useState } from "react";
+import { FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../shadcnui/tabs";
 import DesktopEditor from "./DesktopEditor";
 import MobileEditor from "./MobileEditor";
@@ -35,12 +35,31 @@ const TopElements = () => {
 
 			{/* === Mobile view with working tabs === */}
 			<Tabs
-				defaultValue="xml"
-				className="block w-full md:hidden">
-				<TabsList className="mb-2 flex w-full justify-around">
-					<TabsTrigger value="xml">HTML</TabsTrigger>
-					<TabsTrigger value="css">CSS</TabsTrigger>
-					<TabsTrigger value="javascript">JS</TabsTrigger>
+				className="block w-full md:hidden"
+				defaultValue="xml">
+				<TabsList className="flex w-full justify-around gap-4">
+					<TabsTrigger value="xml">
+						<FaHtml5
+							size={20}
+							color="red"
+							className=""
+						/>
+						HTML
+					</TabsTrigger>
+					<TabsTrigger value="css">
+						<FaCss3Alt
+							color="blue"
+							size={20}
+						/>
+						CSS
+					</TabsTrigger>
+					<TabsTrigger value="javascript">
+						<FaJsSquare
+							color="gold"
+							size={20}
+						/>
+						JS
+					</TabsTrigger>
 				</TabsList>
 
 				<TabsContent value="xml">
@@ -73,6 +92,7 @@ const TopElements = () => {
 			</div>
 
 			{/* === Live preview === */}
+
 			<Preview
 				html={html}
 				css={css}

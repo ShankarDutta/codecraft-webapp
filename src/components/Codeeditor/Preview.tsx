@@ -29,6 +29,9 @@ const Preview = ({ html, css, js }: previewprops) => {
     </head>
     <body>
       ${html}
+
+
+
       <script>
         ${js.replace(/<\/script>/g, "<\\/script>")}
       </script>
@@ -42,7 +45,7 @@ const Preview = ({ html, css, js }: previewprops) => {
 			title="Live Preview"
 			srcDoc={codeFormat}
 			sandbox="allow-scripts"
-			className="h-[305px] w-full"
+			className="h-[270] w-full"
 		/>
 	);
 };

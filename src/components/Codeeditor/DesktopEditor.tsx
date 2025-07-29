@@ -3,8 +3,10 @@
 import { ClientEditorProps } from "@/lib/types";
 import dynamic from "next/dynamic";
 import { FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
+import Loading from "./Loading";
 
 const CodeEditorClient = dynamic(() => import("./CodeEditorClient"), {
+	loading: () => <Loading />,
 	ssr: false,
 });
 

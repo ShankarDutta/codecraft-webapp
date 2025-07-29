@@ -32,7 +32,7 @@ const page = () => {
 			</section>
 
 			{/* contact with us section  */}
-			<section className="mb-20 items-center rounded-md bg-slate-500/35 px-8 py-12 backdrop-blur-md md:flex md:justify-between">
+			<section className="mb-20 items-center rounded-md bg-slate-500/35 px-8 py-12 text-center backdrop-blur-md md:flex md:justify-between md:text-start">
 				<FeedBackSec />
 			</section>
 		</section>
