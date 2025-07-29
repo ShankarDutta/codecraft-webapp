@@ -15,3 +15,9 @@ export type previewprops = {
 	css: string;
 	js: string;
 };
+
+export type ClientEditorProps = {
+	language: "xml" | "css" | "javascript";
+	value: string;
+	onChange: (value: string) => void;
+};
