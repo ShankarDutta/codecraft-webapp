@@ -142,3 +142,9 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+/* Remove black border on focus */
+.cm-editor.cm-focused {
+	outline: none !important;
+	box-shadow: none !important;
+}
