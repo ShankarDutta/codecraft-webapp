@@ -9,8 +9,8 @@ import Preview from "./Preview";
 
 const TopElements = () => {
 	const [html, setHtml] = useState("<h1>Hello</h1>");
-	const [css, setCss] = useState("h1 { color: red; }");
-	const [js, setJs] = useState('console.log("Hello from JS")');
+	const [css, setCss] = useState("h1 { color: red; text-align: center}");
+	const [js, setJs] = useState('console.log("Hello from Anu")');
 
 	return (
 		<section className="mx-auto px-6">

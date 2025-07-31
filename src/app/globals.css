@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "tailwindcss-motion";
+@import "aos/dist/aos.css";
 
 @custom-variant dark (&:is(.dark *));
 

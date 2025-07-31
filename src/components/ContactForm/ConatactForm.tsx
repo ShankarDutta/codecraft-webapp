@@ -1,12 +1,5 @@
 "use client";
-import { ContactSchematype, contactSchema } from "@/lib/conatctschema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader, Send } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useForm } from "react-hook-form";
-import { Slide, ToastContainer, toast } from "react-toastify";
 import { Button } from "@/components/shadcnui/button";
-import ky from "ky";
 import {
 	Form,
 	FormControl,
@@ -17,21 +10,28 @@ import {
 } from "@/components/shadcnui/form";
 import { Input } from "@/components/shadcnui/input";
 import { Textarea } from "@/components/shadcnui/textarea";
+import { useAOS } from "@/hooks/useaos";
+import { contactSchema, ContactSchematype } from "@/lib/conatctschema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ky from "ky";
+import { Loader, Send } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useForm } from "react-hook-form";
+
+import { Slide, toast, ToastContainer } from "react-toastify";
+
 const ContactForm = () => {
 	const { theme } = useTheme();
-	const rhform = useForm<ContactSchematype>({
-		// use resolver
-		resolver: zodResolver(contactSchema),
+	useAOS();
 
-		// default values for the form
+	const rhform = useForm<ContactSchematype>({
+		resolver: zodResolver(contactSchema),
 		defaultValues: {
 			name: "",
 			email: "",
 			phoneno: "",
 			message: "",
 		},
-
-		// mode of validation
 		mode: "onSubmit",
 	});
 
@@ -39,7 +39,7 @@ const ContactForm = () => {
 		try {
 			const payload = {
 				...data,
-				access_key: "YOUR_ACCESS_KEY_HERE",
+				access_key: "8da5ea41-065f-46a4-bd64-c0c05626fe72",
 			};
 
 			const res: { success: boolean } = await ky
@@ -65,12 +65,25 @@ const ContactForm = () => {
 
 	return (
 		<>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick={true} // ✅ recommended UX
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme={theme === "dark" ? "dark" : "light"}
+				transition={Slide}
+			/>
 			<Form {...rhform}>
 				<form
-					action=""
 					onSubmit={rhform.handleSubmit(sentData)}
-					className="grid gap-4">
-					{/* input 01  */}
+					className="grid gap-4"
+					data-aos="fade-left">
+					{/* input 01 */}
 					<FormField
 						control={rhform.control}
 						name="name"
@@ -81,13 +94,14 @@ const ContactForm = () => {
 									<Input
 										{...field}
 										placeholder="Name"
+										autoComplete="off"
 									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
 					/>
-					{/* input 02  */}
+					{/* input 02 */}
 					<FormField
 						control={rhform.control}
 						name="email"
@@ -98,13 +112,14 @@ const ContactForm = () => {
 									<Input
 										{...field}
 										placeholder="Email"
+										autoComplete="off"
 									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
 					/>
-					{/* input 03  */}
+					{/* input 03 */}
 					<FormField
 						control={rhform.control}
 						name="phoneno"
@@ -115,13 +130,14 @@ const ContactForm = () => {
 									<Input
 										{...field}
 										placeholder="Phone Number"
+										autoComplete="off"
 									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
 					/>
-					{/* input 04  */}
+					{/* input 04 */}
 					<FormField
 						control={rhform.control}
 						name="message"
@@ -141,30 +157,22 @@ const ContactForm = () => {
 
 					{/* submit button */}
 					<Button
-						className="text-md w-[150] bg-blue-500 font-normal text-white hover:cursor-pointer hover:bg-blue-600 dark:bg-violet-500 dark:hover:bg-violet-700"
+						type="submit" // ✅ important
+						className="text-md w-[150px] bg-blue-500 font-normal text-white hover:cursor-pointer hover:bg-blue-600 dark:bg-violet-500 dark:hover:bg-violet-700"
 						disabled={rhform.formState.isSubmitting}>
 						{rhform.formState.isSubmitting ? (
 							<>
-								<Loader className="animate-spin" /> Sent Message
+								<Loader className="mr-2 animate-spin" />
+								Sending...
 							</>
 						) : (
 							<>
-								<Send /> Send Message
+								<Send className="mr-2" />
+								Send Message
 							</>
 						)}
 					</Button>
 				</form>
-				<ToastContainer
-					position="top-right"
-					autoClose={4000}
-					hideProgressBar={false}
-					newestOnTop
-					closeOnClick
-					pauseOnFocusLoss={false}
-					draggable
-					theme={theme === "dark" ? "dark" : "light"}
-					transition={Slide}
-				/>
 			</Form>
 		</>
 	);
