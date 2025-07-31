@@ -45,7 +45,7 @@ const Preview = ({ html, css, js }: previewprops) => {
 			title="Live Preview"
 			srcDoc={codeFormat}
 			sandbox="allow-scripts"
-			className="h-[270] w-full"
+			className="h-[280px] w-full"
 		/>
 	);
 };

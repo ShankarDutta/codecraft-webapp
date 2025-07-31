@@ -9,7 +9,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 		<html
 			lang="en"
 			suppressHydrationWarning>
-			<body className="">
+			<body>
 				<ThemeProvider
 					attribute={"class"}
 					defaultTheme="dark"

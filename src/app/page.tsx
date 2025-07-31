@@ -4,10 +4,10 @@ import Hero from "@/components/Home/Hero";
 import Slider from "@/components/Home/Slider";
 import ScrollTopBtn from "@/components/ScrollTopBtn";
 import { Metadata } from "next";
-
 export const metadata: Metadata = {
-	title: "Home | Nextjs Starter Template",
-	description: "Home page of Nextjs Starter Template",
+	title: "Home || CodeCarft : Online Code Editor ",
+	description:
+		"CodeCraft is a modern online code editor built with Next.js, React, and Tailwind CSS. Write, edit, and preview HTML, CSS, and JavaScript in real time. Ideal for developers, students, and creators building fast, responsive web projects in the browser",
 };
 
 const page = () => {
@@ -19,8 +19,12 @@ const page = () => {
 			<Hero />
 
 			{/* infinty logo slide  */}
-			<section className="py-20">
-				<h1 className="py-4 text-center text-2xl font-bold">
+			<section
+				className="py-20"
+				data-aos="fade-up">
+				<h1
+					className="py-4 text-center text-2xl font-bold"
+					data-aos="fade-up">
 					Loved by hundreds of teams, including:
 				</h1>
 				<Slider />
@@ -32,7 +36,9 @@ const page = () => {
 			</section>
 
 			{/* contact with us section  */}
-			<section className="mb-20 items-center rounded-md bg-slate-500/35 px-8 py-12 text-center backdrop-blur-md md:flex md:justify-between md:text-start">
+			<section
+				className="mb-20 items-center rounded-md bg-slate-500/35 px-8 py-12 text-center backdrop-blur-md md:flex md:justify-between md:text-start"
+				data-aos="zoom-in">
 				<FeedBackSec />
 			</section>
 		</section>

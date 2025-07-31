@@ -13,7 +13,7 @@ const Hero = () => {
 					height={200}
 					width={200}
 					priority
-					className="block h-auto w-[250] py-6 lg:hidden"
+					className="motion-opacity-in-0 motion-translate-y-in-50 block h-auto w-[250] py-6 lg:hidden"
 					alt=" logo"
 				/>
 
@@ -44,7 +44,7 @@ const Hero = () => {
 					height={700}
 					width={700}
 					priority
-					className="motion-opacity-in-0 motion-translate-y-in-50 motion-preset-oscillate-sm motion-duration-5000 order-1 h-auto w-[400] lg:order-2 lg:w-auto"
+					className="motion-opacity-in-0 motion-translate-y-in-50 motion-preset-oscillate-sm motion-duration-4000 order-1 h-auto w-[400] lg:order-2 lg:w-auto"
 					alt="hero-side-image"
 				/>
 			</div>

@@ -1,13 +1,19 @@
-import { qna } from "@/lib/mapdata";
-import Image from "next/image";
+"use client";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/shadcnui/accordion";
+import { useAOS } from "@/hooks/useaos";
+import { qna } from "@/lib/mapdata";
 import { qnaprops } from "@/lib/types";
+
+import Image from "next/image";
+
 const FaqSec = () => {
+	useAOS();
+
 	return (
 		<>
 			<div className="justify-between gap-0 lg:flex lg:gap-40">
@@ -17,17 +23,21 @@ const FaqSec = () => {
 					width={700}
 					alt="Frequently-image"
 					priority
+					data-aos="fade-right"
 					className="mx-auto h-auto w-[450px] rounded-md"
 				/>
 
 				<div className="w-full">
-					<h1 className="mb-0 py-10 text-center text-4xl font-semibold md:text-start lg:mb-10 lg:py-0">
+					<h1
+						className="mb-0 py-10 text-center text-4xl font-semibold md:text-start lg:mb-10 lg:py-0"
+						data-aos="zoom-in">
 						Frequently Asked Qustions
 					</h1>
 					<Accordion
 						type="single"
 						collapsible
-						className="space-y-4 rounded-md border-b-3">
+						className="space-y-4 rounded-md border-b-3"
+						data-aos="fade-left">
 						{qna.map((q: qnaprops) => (
 							<AccordionItem
 								key={q.id}
