@@ -59,7 +59,7 @@ const DesktopEditor = ({ language, value, onChange }: ClientEditorProps) => {
 					{getTitle(language)}
 				</span>
 			</div>
-			<div className="h-[270px] overflow-hidden">
+			<div className="h-[270px] overflow-hidden overflow-x-hidden">
 				<CodeEditorClient
 					language={language}
 					value={value}

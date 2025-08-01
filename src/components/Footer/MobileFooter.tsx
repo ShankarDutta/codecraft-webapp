@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
-const DesktopFooter = () => {
+const MobileFooter = () => {
 	return (
-		<section className="grid grid-cols-3 place-items-center-safe">
+		<section className="space-y-6">
 			<div className="">
 				<Link
 					href={"/"}
@@ -32,8 +32,41 @@ const DesktopFooter = () => {
 				</Link>
 			</div>
 
+			{/* icons */}
+
+			<div className="flex gap-2">
+				<a
+					href="https://www.facebook.com/profile.php?id=61577981354081e"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					<FaFacebookF />
+				</a>
+				<a
+					href="https://www.instagram.com/subhamdutta.04?igsh=MTkzbmZnNnZjeGp2Zw==" // replace with your actual FB URL
+					target="_blank"
+					rel="noopener noreferrer"
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					<FaInstagram />
+				</a>
+				<a
+					href="https://www.youtube.com/@We_creation1719" // replace with your number
+					target="_blank"
+					rel="noopener noreferrer"
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					<FaYoutube />
+				</a>
+				<a
+					href="https://wa.me/8697320203" // replace with your number
+					target="_blank"
+					rel="noopener noreferrer"
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					<FaWhatsapp />
+				</a>
+			</div>
+
 			{/* Useful links  */}
-			<div className="relative bottom-3 space-y-0.5">
+			<div className="space-y-0.5">
 				<div className="text-lg font-semibold">Useful Links</div>
 				<div className="">
 					<Link
@@ -69,42 +102,9 @@ const DesktopFooter = () => {
 					<MdMail />
 					shnkardutta1719@gmail.com
 				</div>
-
-				{/* icons */}
-
-				<div className="mt-4 flex gap-2">
-					<a
-						href="https://www.facebook.com/profile.php?id=61577981354081e"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
-						<FaFacebookF />
-					</a>
-					<a
-						href="https://www.instagram.com/subhamdutta.04?igsh=MTkzbmZnNnZjeGp2Zw==" // replace with your actual FB URL
-						target="_blank"
-						rel="noopener noreferrer"
-						className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
-						<FaInstagram />
-					</a>
-					<a
-						href="https://www.youtube.com/@We_creation1719" // replace with your number
-						target="_blank"
-						rel="noopener noreferrer"
-						className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
-						<FaYoutube />
-					</a>
-					<a
-						href="https://wa.me/8697320203" // replace with your number
-						target="_blank"
-						rel="noopener noreferrer"
-						className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
-						<FaWhatsapp />
-					</a>
-				</div>
 			</div>
 		</section>
 	);
 };
 
-export default DesktopFooter;
+export default MobileFooter;
