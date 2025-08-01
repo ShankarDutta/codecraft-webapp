@@ -1,40 +1,27 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DesktopFooter from "./DesktopFooter";
+import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
 	const pathname = usePathname();
-
-	if (pathname === "/codeeditor") return null;
-
-	return (
-		<footer className="rounded-t-2xl md:bg-slate-400/30 dark:md:bg-fuchsia-400/10">
-			<div className="mx-auto hidden max-w-7xl items-center justify-center px-6 py-6 md:flex md:justify-between">
-				<div>
+	return pathname !== "/codeeditor" ? (
+		<footer className="bg-gradient-to-r from-[#00093c] to-[#2d0b00] py-6 text-white">
+			<div className="mx-auto max-w-7xl px-6">
+				<div className="hidden lg:block">
 					<DesktopFooter />
 				</div>
-				<Link
-					href={"/"}
-					className="lg:place-items-end">
-					<Image
-						src={"/logo.svg"}
-						height={140}
-						width={140}
-						className="h-auto w-[150px]" // fixed width style
-						alt="logo"
-					/>
-					<div>©2025 CodeCraft</div>
-				</Link>
-			</div>
+				<div className="block lg:hidden">
+					<MobileFooter />
+				</div>
 
-			{/* Mobile footer */}
-			<div className="mx-auto max-w-7xl border-t-3 border-black/45 px-6 py-4 text-center dark:border-white/45">
-				Copyright © 2025 CodeCraft All rights reserved
+				{/* Copyright */}
+				<div className="mt-6 border-t-2 border-white py-4 text-center">
+					Copyright © 2025 CodeCraft All rights reserved
+				</div>
 			</div>
 		</footer>
-	);
+	) : null;
 };
 
 export default Footer;

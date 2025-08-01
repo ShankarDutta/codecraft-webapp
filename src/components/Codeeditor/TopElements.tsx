@@ -1,6 +1,7 @@
 "use client";
+import { cssAtom, htmlAtom, jsAtom } from "@/lib/codeatom";
+import { useAtom } from "jotai";
 import { Eye } from "lucide-react";
-import { useState } from "react";
 import { FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../shadcnui/tabs";
 import DesktopEditor from "./DesktopEditor";
@@ -8,9 +9,9 @@ import MobileEditor from "./MobileEditor";
 import Preview from "./Preview";
 
 const TopElements = () => {
-	const [html, setHtml] = useState("<h1>Hello</h1>");
-	const [css, setCss] = useState("h1 { color: red; text-align: center}");
-	const [js, setJs] = useState('console.log("Hello from Anu")');
+	const [html, setHtml] = useAtom(htmlAtom);
+	const [css, setCss] = useAtom(cssAtom);
+	const [js, setJs] = useAtom(jsAtom);
 
 	return (
 		<section className="mx-auto px-6">
@@ -33,7 +34,7 @@ const TopElements = () => {
 				/>
 			</div>
 
-			{/* === Mobile view with working tabs === */}
+			{/* === Mobile view === */}
 			<Tabs
 				className="block w-full md:hidden"
 				defaultValue="xml">
@@ -42,22 +43,21 @@ const TopElements = () => {
 						<FaHtml5
 							size={20}
 							color="red"
-							className=""
-						/>
+						/>{" "}
 						HTML
 					</TabsTrigger>
 					<TabsTrigger value="css">
 						<FaCss3Alt
-							color="blue"
 							size={20}
-						/>
+							color="blue"
+						/>{" "}
 						CSS
 					</TabsTrigger>
 					<TabsTrigger value="javascript">
 						<FaJsSquare
-							color="gold"
 							size={20}
-						/>
+							color="gold"
+						/>{" "}
 						JS
 					</TabsTrigger>
 				</TabsList>
@@ -85,14 +85,13 @@ const TopElements = () => {
 				</TabsContent>
 			</Tabs>
 
-			{/* === Preview button === */}
+			{/* === Preview label === */}
 			<div className="my-4 flex h-12 w-full items-center gap-2 rounded-md border-2 text-xl text-green-500">
 				<Eye className="ml-4" />
 				Preview
 			</div>
 
 			{/* === Live preview === */}
-
 			<Preview
 				html={html}
 				css={css}
