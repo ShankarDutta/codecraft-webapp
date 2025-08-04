@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 const page = () => {
 	return (
-		<section className="mx-auto max-w-7xl px-6">
+		<section className="mx-auto max-w-7xl overflow-hidden px-6">
 			<div className="absolute top-0 left-[-85] z-[-10] h-[40%] w-[40%] bg-yellow-300 blur-[250px] dark:bg-blue-400"></div>
 			<div className="mt-10 mb-10 grid grid-cols-1 place-items-center gap-14 lg:mt-0 lg:mb-0 lg:h-[95dvh] lg:grid-cols-2 lg:gap-20">
 				{/* cols 1  */}

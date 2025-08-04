@@ -34,7 +34,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 					enableSystem={false}>
 					<NavBar />
 					<ScrollTopBtn />
-					<main>{children}</main>
+					<main className="">{children}</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

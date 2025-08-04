@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const page = () => {
 	return (
-		<section className="mx-auto max-w-7xl px-6">
+		<section className="mx-auto max-w-7xl overflow-hidden px-6">
 			<div className="motion-scale-in-0 absolute top-60 left-[65%] z-[-10] h-[30%] w-[10%] rounded-full bg-gradient-to-r from-[#3dbeff] from-0% to-[#ff43fc] to-50% blur-[100px]"></div>
 			{/* back-ground gradient  */}
 			<Hero />
