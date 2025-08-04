@@ -39,7 +39,7 @@ const ContactForm = () => {
 		try {
 			const payload = {
 				...data,
-				access_key: "8da5ea41-065f-46a4-bd64-c0c05626fe72",
+				access_key: process.env.NEXT_PUBLIC_WEB3FORM_KEY,
 			};
 
 			const res: { success: boolean } = await ky
