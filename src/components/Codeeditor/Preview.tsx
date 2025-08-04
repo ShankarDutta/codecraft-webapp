@@ -44,8 +44,8 @@ const Preview = ({ html, css, js }: previewprops) => {
 			key={resolvedTheme}
 			title="Live Preview"
 			srcDoc={codeFormat}
-			sandbox="allow-scripts"
-			className="h-[280px] w-full"
+			sandbox="allow-scripts allow-modals"
+			className="h-[272px] w-full"
 		/>
 	);
 };

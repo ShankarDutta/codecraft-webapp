@@ -52,7 +52,7 @@ const MobileNav = () => {
 					</SheetTitle>
 				</SheetHeader>
 
-				<div className="flex flex-col items-center justify-center gap-4 font-semibold">
+				<div className="font-primary flex flex-col items-center justify-center gap-4 font-semibold">
 					<Link
 						href={"/"}
 						className="hover:text-blue-500 dark:hover:text-fuchsia-500">

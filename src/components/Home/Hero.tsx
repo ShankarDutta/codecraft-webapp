@@ -19,11 +19,11 @@ const Hero = () => {
 
 				{/* text section  */}
 				<div className="motion-opacity-in-0 motion-translate-y-in-50 order-2 grid gap-5 text-center lg:order-1 lg:text-left">
-					<h1 className="text-3xl font-bold lg:text-5xl">
+					<h1 className="font-primary text-3xl font-bold lg:text-5xl">
 						The best place to build, test, and discover front-end
 						code.
 					</h1>
-					<p className="text-lg text-black/75 dark:text-white/75">
+					<p className="font-secondary text-lg text-black/75 dark:text-white/75">
 						CodeCraft is a social development environment for
 						front-end designers and developers. Build and deploy a
 						website, show off your work, build test cases to learn
@@ -32,8 +32,8 @@ const Hero = () => {
 
 					{/* started btn  */}
 					<Link href={"/codeeditor"}>
-						<Button className="h-auto w-auto bg-blue-500 text-lg font-normal text-white hover:cursor-pointer hover:bg-blue-600">
-							Start Coding <MoveRight className="pt-0.5" />
+						<Button className="font-secondary h-auto w-auto bg-blue-500 text-lg font-normal text-white hover:cursor-pointer hover:bg-blue-600">
+							Start Coding <MoveRight />
 						</Button>
 					</Link>
 				</div>

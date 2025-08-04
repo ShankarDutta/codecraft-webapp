@@ -29,7 +29,7 @@ const FaqSec = () => {
 
 				<div className="w-full">
 					<h1
-						className="mb-0 py-10 text-center text-4xl font-semibold md:text-start lg:mb-10 lg:py-0"
+						className="font-primary mb-0 py-10 text-center text-4xl font-semibold md:text-start lg:mb-10 lg:py-0"
 						data-aos="zoom-in">
 						Frequently Asked Qustions
 					</h1>
@@ -42,12 +42,12 @@ const FaqSec = () => {
 							<AccordionItem
 								key={q.id}
 								value={`item-${q.id}`}
-								className="rounded-md border-3 p-4">
-								<AccordionTrigger className="font-medium">
+								className="rounded-md border-3 p-4 hover:bg-black/2 dark:hover:bg-white/2">
+								<AccordionTrigger className="font-primary font-medium hover:cursor-pointer">
 									{q.question}
 								</AccordionTrigger>
 
-								<AccordionContent>
+								<AccordionContent className="font-secondary">
 									<span
 										className="[&_a]:text-blue-500 [&_a:hover]:underline"
 										dangerouslySetInnerHTML={{

@@ -5,6 +5,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+	--font-primary: --font-inter, sans-serif;
+	--font-secondary: --font-noto-sans, sans-serif;
+}
+
 :root {
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
@@ -148,4 +153,7 @@
 .cm-editor.cm-focused {
 	outline: none !important;
 	box-shadow: none !important;
+}
+.cm-editor {
+	background-color: none;
 }

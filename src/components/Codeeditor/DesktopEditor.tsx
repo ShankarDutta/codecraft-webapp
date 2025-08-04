@@ -55,11 +55,11 @@ const DesktopEditor = ({ language, value, onChange }: ClientEditorProps) => {
 		<section className="w-full rounded-md border-t-0 border-gray-700 bg-white text-black shadow-lg dark:bg-gray-900 dark:text-white">
 			<div className="flex items-center gap-2 border-b-2 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-800">
 				{getIcon(language)}
-				<span className="text-sm font-medium">
+				<span className="font-primary text-sm">
 					{getTitle(language)}
 				</span>
 			</div>
-			<div className="h-[270px] overflow-hidden overflow-x-hidden">
+			<div className="h-[270px] overflow-hidden overflow-x-auto overflow-y-auto">
 				<CodeEditorClient
 					language={language}
 					value={value}

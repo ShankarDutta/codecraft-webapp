@@ -34,7 +34,7 @@ const ScrollTopBtn = () => {
 				<Button
 					onClick={scrollToBtn}
 					size="icon"
-					className="fixed right-8 bottom-8 z-50 rounded-full bg-blue-400 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl dark:bg-fuchsia-400"
+					className="fixed right-8 bottom-8 z-50 rounded-full bg-blue-400 transition-all duration-300 hover:scale-110 hover:cursor-pointer hover:bg-blue-600 dark:bg-fuchsia-400 dark:hover:bg-fuchsia-500"
 					aria-label="Scroll to top">
 					<ChevronUp className="h-4 w-4" />
 				</Button>

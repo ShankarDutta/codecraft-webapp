@@ -16,7 +16,7 @@ const TopElements = () => {
 	return (
 		<section className="mx-auto px-6">
 			{/* === Desktop view === */}
-			<div className="hidden justify-between gap-4 md:flex">
+			<div className="hidden justify-between gap-4 lg:flex">
 				<DesktopEditor
 					language="xml"
 					value={html}
@@ -36,28 +36,28 @@ const TopElements = () => {
 
 			{/* === Mobile view === */}
 			<Tabs
-				className="block w-full md:hidden"
+				className="block w-full lg:hidden"
 				defaultValue="xml">
-				<TabsList className="flex w-full justify-around gap-4">
+				<TabsList className="font-primary flex w-full justify-around gap-4">
 					<TabsTrigger value="xml">
 						<FaHtml5
 							size={20}
 							color="red"
-						/>{" "}
+						/>
 						HTML
 					</TabsTrigger>
 					<TabsTrigger value="css">
 						<FaCss3Alt
 							size={20}
 							color="blue"
-						/>{" "}
+						/>
 						CSS
 					</TabsTrigger>
 					<TabsTrigger value="javascript">
 						<FaJsSquare
 							size={20}
 							color="gold"
-						/>{" "}
+						/>
 						JS
 					</TabsTrigger>
 				</TabsList>

@@ -23,13 +23,12 @@ const MobileFooter = () => {
 						className="h-auto w-[150px]"
 						alt="logo"
 					/>
-
-					<p className="pt-4">
-						CodeCraft is a social development environment for
-						front-end designers and developers. Build and deploy a
-						website, show off your work.
-					</p>
 				</Link>
+				<p className="font-secondary pt-4">
+					CodeCraft is a social development environment for front-end
+					designers and developers. Build and deploy a website, show
+					off your work.
+				</p>
 			</div>
 
 			{/* icons */}
@@ -39,68 +38,85 @@ const MobileFooter = () => {
 					href="https://www.facebook.com/profile.php?id=61577981354081e"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-400">
 					<FaFacebookF />
 				</a>
 				<a
 					href="https://www.instagram.com/subhamdutta.04?igsh=MTkzbmZnNnZjeGp2Zw==" // replace with your actual FB URL
 					target="_blank"
 					rel="noopener noreferrer"
-					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-400">
 					<FaInstagram />
 				</a>
 				<a
 					href="https://www.youtube.com/@We_creation1719" // replace with your number
 					target="_blank"
 					rel="noopener noreferrer"
-					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-400">
 					<FaYoutube />
 				</a>
 				<a
 					href="https://wa.me/8697320203" // replace with your number
 					target="_blank"
 					rel="noopener noreferrer"
-					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-500">
+					className="rounded-sm bg-blue-500 p-2 text-white dark:bg-fuchsia-400">
 					<FaWhatsapp />
 				</a>
 			</div>
 
 			{/* Useful links  */}
-			<div className="space-y-0.5">
-				<div className="text-lg font-semibold">Useful Links</div>
+			<div className="font-secondary space-y-0.5">
+				<div className="font-primary text-lg font-semibold">
+					Useful Links
+				</div>
 				<div className="">
 					<Link
 						href={"/"}
-						className="">
+						className="hover:text-fuchsia-300">
 						Home
 					</Link>
 				</div>
 				<div className="">
 					<Link
 						href={"/codeeditor"}
-						className="">
+						className="hover:text-fuchsia-300">
 						Code Editor
 					</Link>
 				</div>
 				<div className="">
 					<Link
 						href={"/contact"}
-						className="">
+						className="hover:text-fuchsia-300">
 						Contact
 					</Link>
 				</div>
 			</div>
 
 			{/* contact  */}
-			<div className="space-y-0.5">
-				<div className="text-lg font-semibold">Conatct</div>
-				<div className="flex items-center gap-1">
-					<FaPhoneAlt /> +9123696586
+			<div className="font-secondary space-y-0.5">
+				<div className="font-primary text-lg font-semibold">
+					Conatct
+				</div>
+				<div className="flex items-center gap-1 hover:text-fuchsia-300">
+					<FaPhoneAlt size={18} />
+					<a
+						href="tel:+91236906586"
+						aria-label="Call us at +91 2369 06586"
+						target="_blank"
+						rel="noopener noreferrer">
+						+9123696586
+					</a>
 				</div>
 
-				<div className="flex items-center gap-2">
-					<MdMail />
-					shnkardutta1719@gmail.com
+				<div className="flex items-center gap-2 hover:text-fuchsia-300">
+					<MdMail size={18} />
+					<a
+						href="mailto:shankardutta1719@gmail.com"
+						aria-label="Email us at shankardutta1719@gmail.com"
+						target="_blank"
+						rel="noopener noreferrer">
+						shankardutta1719@gmail.com
+					</a>
 				</div>
 			</div>
 		</section>

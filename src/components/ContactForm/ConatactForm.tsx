@@ -70,7 +70,7 @@ const ContactForm = () => {
 				autoClose={5000}
 				hideProgressBar={false}
 				newestOnTop={false}
-				closeOnClick={true} // ✅ recommended UX
+				closeOnClick={true}
 				rtl={false}
 				pauseOnFocusLoss
 				draggable
@@ -157,7 +157,6 @@ const ContactForm = () => {
 
 					{/* submit button */}
 					<Button
-						type="submit" // ✅ important
 						className="text-md w-[150px] bg-blue-500 font-normal text-white hover:cursor-pointer hover:bg-blue-600 dark:bg-violet-500 dark:hover:bg-violet-700"
 						disabled={rhform.formState.isSubmitting}>
 						{rhform.formState.isSubmitting ? (

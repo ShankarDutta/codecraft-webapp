@@ -16,7 +16,7 @@ const Footer = () => {
 				</div>
 
 				{/* Copyright */}
-				<div className="mt-6 border-t-2 border-white py-4 text-center">
+				<div className="mt-6 border-t-2 border-white pt-4 text-center">
 					Copyright © 2025 CodeCraft All rights reserved
 				</div>
 			</div>

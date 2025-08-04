@@ -1,16 +1,16 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import ThemeChangerBtn from "../Theme/ThemeChangerBtn";
+import CodeEditorNav from "./CodeEditorNav";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import Image from "next/image";
-import CodeEditorNav from "./CodeEditorNav";
 const NavBar = () => {
 	const pathname = usePathname();
 	return (
-		<header className="sticky top-0 z-10 bg-white/40 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-lg dark:bg-white/4">
+		<header className="font-primary sticky top-0 z-10 bg-white/40 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-lg dark:bg-white/4">
 			{pathname !== "/codeeditor" ? (
 				<div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
 					<Link
@@ -38,9 +38,15 @@ const NavBar = () => {
 
 					<div className="flex items-center gap-4">
 						{/* Git icon  */}
-						<Link href={"/"}>
+						<a
+							href={
+								"https://github.com/ShankarDutta/codecraft-webapp"
+							}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="github_link">
 							<FaGithub size={24} />
-						</Link>
+						</a>
 
 						{/* Dark Mode btn  */}
 						<ThemeChangerBtn />
