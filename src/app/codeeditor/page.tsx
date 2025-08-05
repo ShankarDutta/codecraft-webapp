@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 const page = () => {
 	return (
 		<>
-			<section className="bg-white dark:bg-gray-950">
+			<>
 				<TopElements />
-			</section>
+			</>
 		</>
 	);
 };
