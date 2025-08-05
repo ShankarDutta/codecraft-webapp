@@ -1,85 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 CodeCraft
 
-## Getting Started
+**CodeCraft** is a modern web-based frontend playground that enables developers to write, edit, and preview HTML, CSS, and JavaScript code in real time. Built with cutting-edge technologies like **Next.js**, **React**, `@uiw/react-codemirror`, and **Tailwind CSS**, it offers a clean, responsive, and intuitive user experience for rapid prototyping, learning, and sharing.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🖊 **Live Code Editing** — Write HTML, CSS, and JS simultaneously with instant results.
+- ⚡ **Real-Time Preview** — See your output update live as you type.
+- 🎨 **Responsive UI** — Built with Tailwind CSS and `shadcn/ui` for a clean and accessible interface.
+- 🧠 **@uiw/react-codemirror Integration** — Fast, lightweight code editor with syntax highlighting and customization support.
+- 📱 **Mobile-Friendly Design** — Optimized layout for all screen sizes.
+- 🌈 **Dark/Light Theme Support** — Seamless theme switching based on system preferences.
+- 💾 **Local Save Option** — Save your code to `localStorage` to persist work across sessions.
+- 🔗 **Rich UI Enhancements** — Includes icons and animations using `react-icons`, `swiper-js`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Framework**: [Next.js](https://nextjs.org) + [React](https://reactjs.org)
+- **Editor**: [`@uiw/react-codemirror`](https://github.com/uiwjs/react-codemirror)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) + [shadcn/ui](https://ui.shadcn.com)
+- **Icons & UI**: `react-icons`, `swiper-js`.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Use Cases
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🎯 Rapid prototyping of frontend components and layouts.
+- 📚 Learning and experimenting with HTML, CSS, and JavaScript.
+- 🔗 Sharing live, interactive code snippets with others.
+- 💡 Practicing and improving frontend development skills.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚧 Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# codecraft
-
-CodeCraft is a modern frontend code playground built with React, Next.js, CodeMirror, and shadcn/ui. It allows users to write, edit, and preview HTML, CSS, and JavaScript in real time within a clean, responsive interface. Whether you're prototyping ideas, practicing your frontend skills, or sharing code snippets, CodeCraft makes the process fast, easy, and enjoyable.
-
-✨ Features
-🖊 Live code editing — Write and preview HTML, CSS, and JS simultaneously.
-
-⚡ Instant preview — See your code changes update in real time.
-
-🎨 Responsive & clean UI — Powered by Tailwind CSS and shadcn/ui components.
-
-🚀 Built with Next.js & React — Optimized for performance and scalability.
-
-🔌 CodeMirror integration — A powerful, customizable code editor.
-
-🌟 Rich UI elements — Includes react-icons, lucide-react, swiper-js, react-fast-marquee, and more.
-
-🛠 Tech Stack
-React
-
-Next.js
-
-CodeMirror
-
-Tailwind CSS
-
-shadcn/ui
-
-react-icons
-
-lucide-react
-
-swiper-js
-
-
-
-📌 Use Cases
-Rapid prototyping of frontend components and layouts.
-
-Learning and experimenting with HTML, CSS, and JS code.
-
-Sharing code snippets and live demos with others.
-
-💡 Future Improvements
-Code export/download as files or gists.
+- 📁 Code Export (Download as files or Gists)
+- 🔗 Shareable preview URLs
+- 💬 Collaborative editing
+- ☁️ Cloud saving and GitHub login
+- 📦 Integration with code hosting services
 
 Theming support (dark/light mode switch).
 
