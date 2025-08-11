@@ -7,5 +7,5 @@ export function useAOS() {
 			duration: 1000,
 			once: true,
 		});
-	});
+	}, []);
 }
